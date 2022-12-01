@@ -5,8 +5,8 @@ import { formatCurrency } from "../pages/inventory";
 function MyCart(props) {
   return (
     <div className="card card-side bg-white shadow-md">
-      <figure>
-        <img src={props.image} alt="image" />
+      <figure className="ml-5">
+        <img src={props.image ? "https://via.placeholder.com/120x180?text=no+image" : props.image} alt="image" />
       </figure>
       <div className="card-body font-Poppins">
         <h1 className="card-title">{props.name}</h1>

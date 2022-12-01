@@ -21,8 +21,8 @@ function CardProduct({ data, fnEditData, fnDeleteData, fnAddProductOut, fnHandle
   return (
     <>
       <div className="card card-side bg-white shadow-lg m-2 text-black">
-        <figure>
-          <img src={data.product_image} className="h-48" alt="Product Image" />
+        <figure className="p-2">
+          <img  src={data.product_image ? "https://via.placeholder.com/120x192?text=no+image" : data.product_image} className="h-48 rounded-xl" alt="Product Image" />
         </figure>
         <div className="card-body">
           <div className="font-Poppins ">
