@@ -25,15 +25,20 @@ export async function getServerSideProps({ req, res }) {
     requestOptions
   );
   const data = await response.json();
+
+  // Periksa apakah data valid sebelum membalik urutannya
+  const reversedData = data?.data ? data.data.reverse() : [];
+
   return {
     props: {
-      code: data.code,
-      data: data.data.reverse(),
-      message: data.message,
+      code: data?.code,
+      data: reversedData,
+      message: data?.message,
       token,
     },
   };
 }
+
 export default function Home({ data }) {
   const token = getCookie("token");
   const [loading, setLoading] = useState(false);
