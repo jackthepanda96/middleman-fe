@@ -27,15 +27,21 @@ function Cart() {
   }, []);
 
   const fetchData = async () => {
+    console.log("token :", token);
     setLoading(true);
-    const requestOptions = {
+    // const requestOptions = {
+    //   method: "GET",
+    //   headers: {
+    //     Authorization: `Bearer ${token}`,
+    //   },
+    // };
+
+    fetch("https://middleman.altapro.online/carts", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
       },
-    };
-
-    fetch("https://middleman.altapro.online/carts", requestOptions)
+    })
       .then((response) => response.json())
       .then((result) => {
         const { code, data } = result;
@@ -119,7 +125,7 @@ function Cart() {
       },
       body: JSON.stringify(body),
     };
-    fetch(`https://middleman.altapro.online/users`, requestOptions).then(
+    fetch(`https://middleman.altapro.online/orders/users`, requestOptions).then(
       (response) =>
         response
           .json()
