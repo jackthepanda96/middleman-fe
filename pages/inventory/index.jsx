@@ -46,7 +46,7 @@ function Inventory() {
       },
     };
 
-    fetch("https://middleman.altapro.online/users/products", requestOptions)
+    fetch("https://middleman.firdauslabs.com/users/products", requestOptions)
       .then((response) => response.json())
       .then((result) => {
         const { code, data } = result;
@@ -80,7 +80,7 @@ function Inventory() {
       body: formData,
     };
 
-    fetch("https://middleman.altapro.online/users/products", requestOptions)
+    fetch("https://middleman.firdauslabs.com/users/products", requestOptions)
       .then((response) => response.json())
       .then((result) => {
         const { message } = result;
@@ -116,7 +116,7 @@ function Inventory() {
     };
 
     fetch(
-      `https://middleman.altapro.online/users/products/${idProduct}`,
+      `https://middleman.firdauslabs.com/users/products/${idProduct}`,
       requestOptions
     )
       .then((response) => response.json())
@@ -141,7 +141,7 @@ function Inventory() {
     };
 
     fetch(
-      `https://middleman.altapro.online/users/products/${idProduct}`,
+      `https://middleman.firdauslabs.com/users/products/${idProduct}`,
       requestOptions
     )
       .then((result) => {
@@ -167,7 +167,7 @@ function Inventory() {
       body: formData,
     };
 
-    fetch(`https://middleman.altapro.online/inoutbounds`, requestOptions)
+    fetch(`https://middleman.firdauslabs.com/inoutbounds`, requestOptions)
       .then((response) => response.json())
       .then((result) => {
         alert("success creating a cart");
@@ -186,7 +186,7 @@ function Inventory() {
     };
 
     fetch(
-      `https://middleman.altapro.online/users/products/search?productname=${productName}`,
+      `https://middleman.firdauslabs.com/users/products/search?productname=${productName}`,
       requestOptions
     )
       .then((response) => response.json())

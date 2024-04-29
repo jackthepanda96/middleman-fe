@@ -36,7 +36,7 @@ function Cart() {
     //   },
     // };
 
-    fetch("https://middleman.altapro.online/carts", {
+    fetch("https://middleman.firdauslabs.com/carts", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -77,7 +77,7 @@ function Cart() {
     };
 
     fetch(
-      `https://middleman.altapro.online/carts/${data.product_id}`,
+      `https://middleman.firdauslabs.com/carts/${data.product_id}`,
       requestOptions
     )
       .then((response) => response.json())
@@ -100,7 +100,7 @@ function Cart() {
     };
 
     fetch(
-      `https://middleman.altapro.online/carts/${product_id}`,
+      `https://middleman.firdauslabs.com/carts/${product_id}`,
       requestOptions
     )
       .then((result) => {
@@ -125,7 +125,7 @@ function Cart() {
       },
       body: JSON.stringify(body),
     };
-    fetch(`https://middleman.altapro.online/orders/users`, requestOptions).then(
+    fetch(`https://middleman.firdauslabs.com/orders/users`, requestOptions).then(
       (response) =>
         response
           .json()

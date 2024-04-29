@@ -39,7 +39,7 @@ export default function Register() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     };
-    fetch("https://middleman.altapro.online/register", requestOptions)
+    fetch("https://middleman.firdauslabs.com/register", requestOptions)
       .then((response) => response.json())
       .then((result) => {
         const { code, message } = result;

@@ -32,7 +32,7 @@ function HistoryProductOut() {
       },
     };
 
-    fetch("https://middleman.altapro.online/users/inventory", requestOptions)
+    fetch("https://middleman.firdauslabs.com/users/inventory", requestOptions)
       .then((response) => response.json())
       .then((result) => {
         const { code, data } = result;

@@ -39,7 +39,7 @@ function Inbound() {
       },
     };
 
-    fetch("https://middleman.altapro.online/inoutbounds", requestOptions)
+    fetch("https://middleman.firdauslabs.com/inoutbounds", requestOptions)
       .then((response) => response.json())
       .then((result) => {
         const { code, data } = result;
@@ -72,7 +72,7 @@ function Inbound() {
       body: JSON.stringify(body),
     };
 
-    fetch("https://middleman.altapro.online/admins/inventory", requestOptions)
+    fetch("https://middleman.firdauslabs.com/admins/inventory", requestOptions)
       .then((response) => response.json())
       .then((result) => {
         const { message } = result;
@@ -95,7 +95,7 @@ function Inbound() {
     };
 
     fetch(
-      `https://middleman.altapro.online/inoutbounds/${idProduct}`,
+      `https://middleman.firdauslabs.com/inoutbounds/${idProduct}`,
       requestOptions
     )
       .then((result) => {

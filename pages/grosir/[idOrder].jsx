@@ -32,7 +32,7 @@ function Detail() {
     };
 
     fetch(
-      `https://middleman.altapro.online/orders/users/${id_order}`,
+      `https://middleman.firdauslabs.com/orders/users/${id_order}`,
       requestOptions
     )
       .then((response) => response.json())
@@ -61,7 +61,7 @@ function Detail() {
     };
 
     fetch(
-      `https://middleman.altapro.online/orders/confirm/${id_order}`,
+      `https://middleman.firdauslabs.com/orders/confirm/${id_order}`,
       requestOptions
     )
       .then((response) => response.json())
@@ -88,7 +88,7 @@ function Detail() {
     };
 
     fetch(
-      `https://middleman.altapro.online/orders/done/${id_order}`,
+      `https://middleman.firdauslabs.com/orders/done/${id_order}`,
       requestOptions
     )
       .then((response) => response.json())

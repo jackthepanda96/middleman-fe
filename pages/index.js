@@ -21,7 +21,7 @@ export async function getServerSideProps({ req, res }) {
     },
   };
   const response = await fetch(
-    `https://middleman.altapro.online/admins/products`,
+    `https://middleman.firdauslabs.com/admins/products`,
     requestOptions
   );
   const data = await response.json();
@@ -62,7 +62,7 @@ export default function Home({ data }) {
       body: JSON.stringify(body),
     };
 
-    fetch("https://middleman.altapro.online/carts", requestOptions)
+    fetch("https://middleman.firdauslabs.com/carts", requestOptions)
       .then((response) => response.json())
       .then((result) => {
         const { message } = result;
@@ -83,7 +83,7 @@ export default function Home({ data }) {
     };
 
     fetch(
-      `https://middleman.altapro.online/admins/products/search?productname=${productName}`,
+      `https://middleman.firdauslabs.com/admins/products/search?productname=${productName}`,
       requestOptions
     )
       .then((response) => response.json())

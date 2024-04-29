@@ -21,7 +21,7 @@ export async function getServerSideProps({ req, res }) {
     },
   };
   const response = await fetch(
-    `https://middleman.altapro.online/orders/users`,
+    `https://middleman.firdauslabs.com/orders/users`,
     requestOptions
   );
   const data = await response.json();

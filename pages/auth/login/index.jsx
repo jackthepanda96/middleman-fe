@@ -32,7 +32,7 @@ export default function Login() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     };
-    fetch("https://middleman.altapro.online/login", requestOptions)
+    fetch("https://middleman.firdauslabs.com/login", requestOptions)
       .then((response) => response.json())
       .then((result) => {
         const { code, data, message } = result;

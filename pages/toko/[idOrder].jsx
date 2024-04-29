@@ -31,7 +31,7 @@ function Detail_order() {
     };
 
     fetch(
-      `https://middleman.altapro.online/orders/users/${idOrder}`,
+      `https://middleman.firdauslabs.com/orders/users/${idOrder}`,
       requestOptions
     )
       .then((response) => response.json())

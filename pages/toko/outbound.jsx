@@ -35,7 +35,7 @@ function Outbound() {
       },
     };
 
-    fetch("https://middleman.altapro.online/inoutbounds", requestOptions)
+    fetch("https://middleman.firdauslabs.com/inoutbounds", requestOptions)
       .then((response) => response.json())
       .then((result) => {
         const { code, data } = result;
@@ -80,7 +80,7 @@ function Outbound() {
       body: JSON.stringify(body),
     };
 
-    fetch("https://middleman.altapro.online/users/inventory", requestOptions)
+    fetch("https://middleman.firdauslabs.com/users/inventory", requestOptions)
       .then((response) => response.json())
       .then((result) => {
         const { message } = result;
@@ -103,7 +103,7 @@ function Outbound() {
     };
 
     fetch(
-      `https://middleman.altapro.online/inoutbounds/${idProduct}`,
+      `https://middleman.firdauslabs.com/inoutbounds/${idProduct}`,
       requestOptions
     )
       .then((result) => {

@@ -31,7 +31,7 @@ function DetailProductIn() {
     };
 
     fetch(
-      `https://middleman.altapro.online/admins/inventory/${idInventory}`,
+      `https://middleman.firdauslabs.com/admins/inventory/${idInventory}`,
       requestOptions
     )
       .then((response) => response.json())

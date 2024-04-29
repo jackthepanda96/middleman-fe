@@ -30,7 +30,7 @@ function HistoryProductIn() {
       },
     };
 
-    fetch("https://middleman.altapro.online/admins/inventory", requestOptions)
+    fetch("https://middleman.firdauslabs.com/admins/inventory", requestOptions)
       .then((response) => response.json())
       .then((result) => {
         const { code, data } = result;

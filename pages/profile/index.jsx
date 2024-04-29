@@ -23,7 +23,7 @@ export async function getServerSideProps({ req, res }) {
     },
   };
   const response = await fetch(
-    "https://middleman.altapro.online/users",
+    "https://middleman.firdauslabs.com/users",
     requestOptions
   );
   const data = await response.json();
@@ -70,7 +70,7 @@ const Profile = ({ data }) => {
       body: JSON.stringify(body),
     };
 
-    fetch(`https://middleman.altapro.online/users`, requestOptions)
+    fetch(`https://middleman.firdauslabs.com/users`, requestOptions)
       .then((response) => response.json())
       .then((result) => {
         const { message, code } = result;
@@ -102,7 +102,7 @@ const Profile = ({ data }) => {
       },
     };
 
-    fetch("https://middleman.altapro.online/users", requestOptions)
+    fetch("https://middleman.firdauslabs.com/users", requestOptions)
       .then((response) => response.json())
       .then((result) => {
         const { message, code } = result;
