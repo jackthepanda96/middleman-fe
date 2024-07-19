@@ -19,7 +19,7 @@ function Detail() {
     if (!token) {
       router.push("/auth/welcome");
     }
-    fetchData(idOrder);
+    idOrder && fetchData(idOrder);
   }, [idOrder]);
 
   const fetchData = async (id_order) => {
@@ -39,10 +39,9 @@ function Detail() {
       .then((result) => {
         const { code, data } = result;
         if (code === 200) {
-          console.log(data);
           setItems(data.items);
           setTotal(data.grand_total);
-          setId(data.id_order);
+          setId(data.order_id);
           setStatus(data.status);
         }
       })
@@ -138,7 +137,7 @@ function Detail() {
         </div>
         <div className="m-3 lg:m-0 flex justify-center gap-2 font-Roboto">
           {status !== "delivered" &&
-          status !== "pending" &&
+          status === "pending" &&
           status !== "canceled" ? (
             status === "waiting confirmation" ? (
               <button
